@@ -1,1 +1,42 @@
 .DS_Store
+
+# Environment and credentials
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.csr
+*.jks
+*.keystore
+
+# Client/tax documents must never be committed
+clientes/
+cliente/
+documentos/
+documentos-clientes/
+declaracoes/
+declarações/
+recibos/
+informes/
+impostos/
+irpf-clientes/
+*.pdf
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.csv
+*.ofx
+*.qif
+*.zip
+*.rar
+*.7z
+
+# Local/editor files
+.vscode/
+.idea/
+*.log

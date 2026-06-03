@@ -41,6 +41,7 @@ const recommendationTitle = document.querySelector("#recommendation-title");
 const recommendationCopy = document.querySelector("#recommendation-copy");
 const whatsappLink = document.querySelector("#whatsapp-link");
 const copyButton = document.querySelector("#copy-summary");
+const contactMessage = "Olá, quero iniciar atendimento de IRPF com a ORISCONTA.";
 
 let currentSummary = "";
 
@@ -91,8 +92,8 @@ function renderChecklist(items) {
   });
 }
 
-function updateWhatsApp(summary) {
-  const text = encodeURIComponent(summary);
+function updateWhatsApp() {
+  const text = encodeURIComponent(contactMessage);
   whatsappLink.href = `https://wa.me/5500000000000?text=${text}`;
 }
 
@@ -100,7 +101,6 @@ function handleSubmit(event) {
   event.preventDefault();
 
   const data = new FormData(form);
-  const name = data.get("client-name") || "Cliente";
   const profile = data.get("profile");
   const status = data.get("status");
   const events = getCheckedEvents();
@@ -113,7 +113,7 @@ function handleSubmit(event) {
   renderChecklist(items);
 
   currentSummary = [
-    `Triagem ORISCONTA - ${name}`,
+    "Triagem ORISCONTA",
     plan.title,
     `Perfil: ${profile}`,
     `Situação: ${status}`,
@@ -122,7 +122,7 @@ function handleSubmit(event) {
     ...items.map((item) => `- ${item}`)
   ].join("\n");
 
-  updateWhatsApp(currentSummary);
+  updateWhatsApp();
 }
 
 copyButton.addEventListener("click", async () => {
@@ -132,9 +132,9 @@ copyButton.addEventListener("click", async () => {
 
   try {
     await navigator.clipboard.writeText(currentSummary);
-    copyButton.textContent = "Resumo copiado";
+    copyButton.textContent = "Checklist copiado";
     setTimeout(() => {
-      copyButton.textContent = "Copiar resumo";
+      copyButton.textContent = "Copiar checklist";
     }, 1800);
   } catch {
     copyButton.textContent = "Selecione e copie";
@@ -142,3 +142,4 @@ copyButton.addEventListener("click", async () => {
 });
 
 form.addEventListener("submit", handleSubmit);
+updateWhatsApp();

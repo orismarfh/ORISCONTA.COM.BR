@@ -30,6 +30,7 @@
         <a href="#triagem">Triagem</a>
         <a href="#planos">Planos</a>
         <a href="#operacao">Operação</a>
+        <a href="privacidade.html">Privacidade</a>
       </nav>
     </header>
 
@@ -62,10 +63,10 @@
             <h2>Triagem rápida do IRPF</h2>
           </div>
 
-          <label>
-            Nome
-            <input id="client-name" name="client-name" type="text" autocomplete="name" placeholder="Nome do contribuinte">
-          </label>
+          <p class="security-note">
+            Esta triagem roda no seu navegador e não envia dados automaticamente. Não informe CPF, senha gov.br
+            ou envie documentos por aqui.
+          </p>
 
           <div class="field-grid">
             <label>
@@ -131,8 +132,11 @@
             <a class="primary-link" id="whatsapp-link" href="https://wa.me/5500000000000" target="_blank" rel="noreferrer">
               Iniciar atendimento
             </a>
-            <button class="ghost-button" id="copy-summary" type="button">Copiar resumo</button>
+            <button class="ghost-button" id="copy-summary" type="button">Copiar checklist</button>
           </div>
+          <p class="privacy-hint">
+            O botão de WhatsApp abre uma mensagem genérica. O checklist só é copiado se você clicar em copiar.
+          </p>
         </div>
 
         <div class="checklist-box">
@@ -212,13 +216,14 @@
         <p>
           Atendimento sujeito a análise documental. A ORISCONTA usa IA como apoio operacional, com revisão humana
           e responsabilidade técnica do contador. A transmissão da declaração depende de autorização do contribuinte.
+          Consulte a <a href="privacidade.html">política de privacidade</a>.
         </p>
       </section>
     </main>
 
     <footer class="site-footer">
       <strong>ORISCONTA.COM.BR</strong>
-      <span>IRPF assistido por IA, administrado por contador.</span>
+      <span>IRPF assistido por IA, administrado por contador. <a href="privacidade.html">Privacidade</a></span>
     </footer>
 
     <script src="script.js"></script>
