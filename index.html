@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="ORISCONTA.COM.BR: declaração de Imposto de Renda Pessoa Física assistida por IA e revisada por contador."
+    >
+    <title>ORISCONTA.COM.BR | IRPF assistido por IA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="ORISCONTA.COM.BR">
+        <span class="brand-mark">O</span>
+        <span>
+          <strong>ORISCONTA</strong>
+          <small>.COM.BR</small>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="#triagem">Triagem</a>
+        <a href="#planos">Planos</a>
+        <a href="#operacao">Operação</a>
+      </nav>
+    </header>
+
+    <main id="inicio">
+      <section class="intake-shell" id="triagem" aria-labelledby="hero-title">
+        <div class="hero-panel">
+          <p class="eyebrow">IRPF Brasil 2026</p>
+          <h1 id="hero-title">Seu Imposto de Renda organizado por IA e revisado por contador.</h1>
+          <p class="hero-copy">
+            Uma experiência completa para declarar IRPF: triagem, checklist, organização de documentos,
+            conferência técnica e entrega com recibo.
+          </p>
+
+          <div class="trust-row" aria-label="Diferenciais">
+            <span>IA nos bastidores</span>
+            <span>Contador responsável</span>
+            <span>Fluxo auditável</span>
+          </div>
+
+          <img
+            class="hero-image"
+            src="assets/orisconta-irpf-ai.png"
+            alt="Mesa de trabalho com notebook, documentos fiscais organizados e interface digital de análise."
+          >
+        </div>
+
+        <form class="triage-panel" id="triage-form">
+          <div class="panel-heading">
+            <p class="eyebrow">Comece aqui</p>
+            <h2>Triagem rápida do IRPF</h2>
+          </div>
+
+          <label>
+            Nome
+            <input id="client-name" name="client-name" type="text" autocomplete="name" placeholder="Nome do contribuinte">
+          </label>
+
+          <div class="field-grid">
+            <label>
+              Perfil principal
+              <select id="profile" name="profile">
+                <option value="assalariado">Assalariado</option>
+                <option value="aposentado">Aposentado ou pensionista</option>
+                <option value="autonomo">Autônomo/profissional liberal</option>
+                <option value="empresario">Sócio, empresário ou pró-labore</option>
+              </select>
+            </label>
+
+            <label>
+              Situação
+              <select id="status" name="status">
+                <option value="no-prazo">Declaração regular</option>
+                <option value="atraso">Declaração em atraso</option>
+                <option value="retificacao">Retificação</option>
+              </select>
+            </label>
+          </div>
+
+          <fieldset>
+            <legend>Marque o que aconteceu em 2025</legend>
+            <label class="check-row">
+              <input type="checkbox" name="events" value="dependentes">
+              Teve dependentes, pensão ou guarda
+            </label>
+            <label class="check-row">
+              <input type="checkbox" name="events" value="saude">
+              Pagou despesas médicas, odontológicas ou plano de saúde
+            </label>
+            <label class="check-row">
+              <input type="checkbox" name="events" value="investimentos">
+              Teve investimentos, ações, FIIs, cripto ou exterior
+            </label>
+            <label class="check-row">
+              <input type="checkbox" name="events" value="imoveis">
+              Comprou, vendeu, alugou ou financiou imóvel
+            </label>
+            <label class="check-row">
+              <input type="checkbox" name="events" value="bens">
+              Comprou ou vendeu carro, moto ou outro bem relevante
+            </label>
+            <label class="check-row">
+              <input type="checkbox" name="events" value="dividas">
+              Tinha empréstimos, financiamentos ou dívidas em 31/12
+            </label>
+          </fieldset>
+
+          <button class="primary-button" type="submit">Gerar meu checklist</button>
+        </form>
+      </section>
+
+      <section class="result-band" aria-live="polite">
+        <div class="result-summary">
+          <p class="eyebrow">Resultado da triagem</p>
+          <h2 id="recommendation-title">Plano recomendado: IRPF Essencial</h2>
+          <p id="recommendation-copy">
+            Ideal para declarações simples com informes de rendimento, bancos, saúde e bens básicos.
+          </p>
+          <div class="action-row">
+            <a class="primary-link" id="whatsapp-link" href="https://wa.me/5500000000000" target="_blank" rel="noreferrer">
+              Iniciar atendimento
+            </a>
+            <button class="ghost-button" id="copy-summary" type="button">Copiar resumo</button>
+          </div>
+        </div>
+
+        <div class="checklist-box">
+          <div class="panel-heading compact">
+            <p class="eyebrow">Documentos</p>
+            <h2>Checklist personalizado</h2>
+          </div>
+          <ul id="checklist">
+            <li>Documento com CPF e dados cadastrais atualizados.</li>
+            <li>Última declaração entregue e recibo, se houver.</li>
+            <li>Informes de rendimentos e informes bancários de 31/12/2025.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="pricing-section" id="planos" aria-labelledby="pricing-title">
+        <div class="section-heading">
+          <p class="eyebrow">Oferta inicial</p>
+          <h2 id="pricing-title">Um único serviço, três níveis de complexidade.</h2>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="plan">
+            <h3>IRPF Essencial</h3>
+            <p>Assalariado, aposentado ou declaração simples.</p>
+            <strong>A partir de R$ 149</strong>
+            <span>Triagem, checklist, preenchimento, revisão e recibo.</span>
+          </article>
+
+          <article class="plan featured">
+            <h3>IRPF Investidor</h3>
+            <p>Investimentos, renda variável, cripto, exterior ou múltiplos informes.</p>
+            <strong>A partir de R$ 349</strong>
+            <span>Inclui conferência de informes, bens e pendências de carteira.</span>
+          </article>
+
+          <article class="plan">
+            <h3>IRPF Patrimonial</h3>
+            <p>Imóveis, aluguel, venda de bens, herança, dependentes ou maior risco.</p>
+            <strong>A partir de R$ 499</strong>
+            <span>Tratamento detalhado de patrimônio, pagamentos e operações especiais.</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="operation-section" id="operacao" aria-labelledby="operation-title">
+        <div class="section-heading">
+          <p class="eyebrow">Como funciona</p>
+          <h2 id="operation-title">IA acelera. Você valida. O cliente acompanha.</h2>
+        </div>
+
+        <div class="steps">
+          <article>
+            <span>01</span>
+            <h3>Triagem</h3>
+            <p>O cliente informa o perfil e recebe um checklist de documentos conforme a complexidade.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Organização</h3>
+            <p>A IA ajuda a separar informes, despesas, bens, dívidas e pontos de atenção.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Revisão técnica</h3>
+            <p>O contador confere os dados, resolve inconsistências e decide o tratamento correto.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Entrega</h3>
+            <p>O cliente recebe recibo, resumo final, orientações e próximos cuidados.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="compliance-band" aria-label="Avisos importantes">
+        <p>
+          Atendimento sujeito a análise documental. A ORISCONTA usa IA como apoio operacional, com revisão humana
+          e responsabilidade técnica do contador. A transmissão da declaração depende de autorização do contribuinte.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <strong>ORISCONTA.COM.BR</strong>
+      <span>IRPF assistido por IA, administrado por contador.</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
