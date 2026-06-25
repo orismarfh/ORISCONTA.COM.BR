@@ -201,7 +201,8 @@ select {
 }
 
 .security-note,
-.privacy-hint {
+.privacy-hint,
+.form-feedback {
   margin: 0;
   border-left: 4px solid var(--gold);
   padding: 12px 14px;
@@ -216,6 +217,21 @@ select {
   border-left-color: var(--teal);
   background: #edf8f8;
   color: #214e52;
+}
+
+.form-feedback {
+  display: none;
+  border-left-color: var(--green);
+  background: #eef8f2;
+  color: var(--green-dark);
+}
+
+.form-feedback.is-visible {
+  display: block;
+}
+
+.primary-button.is-complete {
+  background: var(--green-dark);
 }
 
 label,
@@ -317,6 +333,11 @@ legend {
   padding: clamp(36px, 6vw, 72px) clamp(18px, 5vw, 64px);
   background: #eef5f1;
   border-bottom: 1px solid var(--line);
+  scroll-margin-top: 78px;
+}
+
+.result-band:focus {
+  outline: none;
 }
 
 .result-summary,

@@ -41,6 +41,9 @@ const recommendationTitle = document.querySelector("#recommendation-title");
 const recommendationCopy = document.querySelector("#recommendation-copy");
 const whatsappLink = document.querySelector("#whatsapp-link");
 const copyButton = document.querySelector("#copy-summary");
+const resultBand = document.querySelector("#resultado");
+const formFeedback = document.querySelector("#form-feedback");
+const submitButton = form.querySelector('button[type="submit"]');
 const contactMessage = "Olá, quero iniciar atendimento de IRPF com a ORISCONTA.";
 
 let currentSummary = "";
@@ -97,6 +100,18 @@ function updateWhatsApp() {
   whatsappLink.href = `https://wa.me/5500000000000?text=${text}`;
 }
 
+function showGeneratedFeedback() {
+  formFeedback.textContent = "Checklist gerado. Revise o resultado abaixo.";
+  formFeedback.classList.add("is-visible");
+  submitButton.textContent = "Atualizar checklist";
+  submitButton.classList.add("is-complete");
+}
+
+function showResult() {
+  resultBand.scrollIntoView({ behavior: "smooth", block: "start" });
+  resultBand.focus({ preventScroll: true });
+}
+
 function handleSubmit(event) {
   event.preventDefault();
 
@@ -123,6 +138,8 @@ function handleSubmit(event) {
   ].join("\n");
 
   updateWhatsApp();
+  showGeneratedFeedback();
+  showResult();
 }
 
 copyButton.addEventListener("click", async () => {
