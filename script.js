@@ -97,7 +97,7 @@ function renderChecklist(items) {
 
 function updateWhatsApp() {
   const text = encodeURIComponent(contactMessage);
-  whatsappLink.href = `https://wa.me/5500000000000?text=${text}`;
+  whatsappLink.href = `https://wa.me/5521971501414?text=${text}`;
 }
 
 function showGeneratedFeedback() {
